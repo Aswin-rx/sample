@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bible Quiz</title>
     <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <!-- Header Start -->
     <div class="header" id="header">
         <nav>
-            
+            <input type="checkbox" id="show-menu">
             <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
             <div class="content">
-                <div class="logo"><a href="index.html"><img src="images/biblelogo.jpg" alt=""></a></div>
-
+                <div class="logo"><a href="index.html"><img src="images/biblelogo.jpg" alt="Logo"></a></div>
                 <ul class="links">
                     <li><a href="#" id="first">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -31,7 +30,6 @@
                 <input type="text" placeholder="Search" required>
                 <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
             </form>
-
         </nav>
     </div>
     <!-- Header End -->
@@ -39,7 +37,7 @@
     <!-- Home Section Start -->
     <div class="home">
         <div class="main-text">
-            <h1>Bible Quiz </h1>
+            <h1>Bible Quiz</h1>
             <p>Our mission is to spread the word of God and inspire people to deepen their faith</p>
             <button id="btn">Join us</button>
         </div>
@@ -49,32 +47,23 @@
     <!-- About Section Start -->
     <section class="about" id="about">
         <div class="about-img">
-            <img src="images/bibleabt.avif" alt="">
+            <img src="images/bibleabt.avif" alt="About us">
         </div>
         <div class="about-text">
-            <h3> About us</h3>
+            <h3>About us</h3>
             <p>With all the challenges our world faces today, communities of people of faith are growing to spread the message of God's love and hope.</p>
-
             <button id="about-btn">Read More...</button>
         </div>
-        
     </section>
     <!-- About Section End -->
-
-
-
-
 
     <!-- Banner Start -->
     <div class="banner">
         <div class="banner-content">
-            
             <h3>Deepening your faith is possible. We've helped many people do it before.</h3>
         </div>
     </div>
     <!-- Banner End -->
-
-
 
     <!-- Contact Section Start -->
     <section class="contact" id="contact">
@@ -95,62 +84,50 @@
                 <input type="email" placeholder="Email" required>
                 <textarea name="" id="" cols="35" rows="10" placeholder="Message"></textarea>
                 <input type="submit" value="Send" class="submit" required>
-
             </form>
         </div>
-
     </section>
     <!-- Contact Section End -->
 
-
-
-
-<!-- Review Section Start -->
-<section class="reviews" id="reviews">
-    <div class="container">
-        <h2 class="section-title">What People Say</h2>
-        <div class="review-cards">
-            <div class="review-card">
-                <div class="reviewer-info">
-                    <img src="images/pic-1.png" alt="Reviewer 1" class="reviewer-photo">
-                    <h3 class="reviewer-name">John Doe</h3>
+    <!-- Review Section Start -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="review-cards">
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="images/pic-1.png" alt="Reviewer 1" class="reviewer-photo">
+                        <h3 class="reviewer-name">John Doe</h3>
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
                 </div>
-                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-            </div>
-            <div class="review-card">
-                <div class="reviewer-info">
-                    <img src="images/pic-2.png" alt="Reviewer 2" class="reviewer-photo">
-                    <h3 class="reviewer-name">Jane Smith</h3>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="images/pic-2.png" alt="Reviewer 2" class="reviewer-photo">
+                        <h3 class="reviewer-name">Jane Smith</h3>
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
                 </div>
-                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
-            </div>
-            <div class="review-card">
-                <div class="reviewer-info">
-                    <img src="images/pic-3.png" alt="Reviewer 3" class="reviewer-photo">
-                    <h3 class="reviewer-name">Bob Johnson</h3>
+                <div class="review-card">
+                    <div class="reviewer-info">
+                        <img src="images/pic-3.png" alt="Reviewer 3" class="reviewer-photo">
+                        <h3 class="reviewer-name">Bob Johnson</h3>
+                    </div>
+                    <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
                 </div>
-                <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
             </div>
         </div>
-    </div>
-</section>
-<!-- Review Section End -->
-
-
-
-
-
+    </section>
+    <!-- Review Section End -->
 
     <!-- Footer Start -->
     <footer id="footer">
         <div class="footer-content">
             <div class="logo">
-                <img src="images/biblelogo.jpg" alt="">
+                <img src="images/biblelogo.jpg" alt="Logo">
             </div>
-
             <p>"Explore the Bible like never before with our engaging quizzes and deepen your understanding of scripture today!</p>
-            
-            <div class="socail-links">
+            <div class="social-links">
                 <i class="fa-brands fa-twitter"></i>
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-instagram"></i>
@@ -161,26 +138,6 @@
         <hr>
     </footer>
     <!-- Footer End -->
-    <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="" width="50px"></i></a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="Up arrow" width="50px"></i></a>
 </body>
 </html>
