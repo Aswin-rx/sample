@@ -14,7 +14,7 @@
     <div class="header" id="header">
         <nav>
             <input type="checkbox" id="show-menu">
-            <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+            <label for="show-menu" class="menu-icon"></label>
             <div class="content">
                 <div class="logo"><a href="index.html"><img src="images/biblelogo.jpg" alt="Logo"></a></div>
                 <ul class="links">
@@ -25,11 +25,16 @@
                     <li><a href="video.html">Videos</a></li>
                 </ul>
             </div>
-            <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-            <form action="#" class="search-box">
-                <input type="text" placeholder="Search" required>
-                <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
-            </form>
+            <div class="menu">
+                <div class="search-container">
+                    <input type="checkbox" id="toggle-search" class="toggle-search">
+                    <label for="toggle-search" class="search-icon">
+                        <span class="fa fa-search"></span>
+                    </label>
+            <div class="search-box">
+            <input type="text" placeholder="Search..." class="search-input" />
+            <button type="button" class="search-submit">Go</button>
+            </div>
         </nav>
     </div>
     <!-- Header End -->
@@ -141,3 +146,4 @@
     <a href="#" class="arrow"><i><img src="./images/up-arrow.png" alt="Up arrow" width="50px"></i></a>
 </body>
 </html>
+ 

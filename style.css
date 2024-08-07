@@ -71,27 +71,70 @@ nav .content .links li a:hover {
     display: none;
 }
 
-.header .search-box {
+
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.search-icon {
+    cursor: pointer;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 24px;
+    color: #388b6f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-search {
     display: none;
 }
 
-.header .search-box input {
+.search-box {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
     width: 200px;
-    padding: 10px;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 5;
+}
+
+.search-input {
+    width: calc(100% - 50px);
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.header .search-box button {
-    background: #388b6f;
+.search-submit {
+    background-color: #388b6f;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Responsive Design */
+.toggle-search:checked ~ .search-box {
+    display: flex;
+    align-items: center;
+}
+.toggle-search:checked ~ .search-box {
+    display: inline-block;
+}
+.toggle-search:checked + .search-icon {
+    display: none;
+}
+
 @media screen and (max-width: 900px) {
     .header nav {
         flex-direction: row;
@@ -117,9 +160,10 @@ nav .content .links li a:hover {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 899px) {
     .header nav {
         flex-direction: row;
+        z-index: 999;
     }
     .header .content {
         flex-direction: column;
@@ -140,9 +184,84 @@ nav .content .links li a:hover {
     .header #show-menu:checked + .menu-icon + .content .links {
         display: flex;
     }
+    .content .links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .content .links li {
+        display: block;
+        text-align: left;
+        padding: 10px 0;
+    }
+    .menu-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        position: relative;
+        z-index: 1001; 
+    }
+    
+    .menu-icon::before {
+        content: "\f0c9"; 
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900; 
+        font-size: 24px;
+        color: #388b6f;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        display: block;
+    }
+    
+    .menu-icon::after {
+        content: "\f00d"; 
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900; 
+        font-size: 30px;
+        color: #388b6f;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        display: block;
+        opacity: 0;
+        transform: rotate(-90deg);
+        margin-top:0;
+        padding:0;
+    }
+    
+    
+    .menu-icon::before {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    #show-menu:checked ~ .header + .content {
+        left: 0;
+    }
+    
+   
+    #show-menu:checked ~ .menu-icon::before {
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+    
+    #show-menu:checked ~ .menu-icon::after {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    #show-menu:checked ~ .logo {
+        display: none;
+    }
+    .logo{
+        display:none;
+    }
+    
 }
-
-
+    
 .home {
     display: flex;
     align-items: center;
@@ -251,6 +370,12 @@ nav .content .links li a:hover {
     .reviews .review-card {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+    .search-container {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 100;
     }
 }
 
@@ -504,3 +629,4 @@ footer {
 }
 
 
+   
