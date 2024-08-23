@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="reg.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <div class="container">
+        <header>Registration Form</header>
+        <form id="form" class="form">
+            
+            <div class="input-box">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname">
+                <small></small> <!-- For displaying validation messages -->
+            </div>
+
+            
+            <div class="input-box">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <small></small>
+            </div>
+
+            
+            <div class="input-box">
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" id="phonenumber" name="phonenumber">
+                <small></small>
+            </div>
+
+           
+            <div class="input-box">
+                <label for="birthdate">Date of Birth</label>
+                <input type="date" id="birthdate" name="birthdate">
+                <small></small>
+            </div>
+
+           
+            <div class="input-box">
+                <label for="address1">Address Line 1</label>
+                <input type="text" id="address1" name="address1">
+                <small></small>
+            </div>
+
+           
+            <div class="input-box">
+                <label for="address2">Address Line 2</label>
+                <input type="text" id="address2" name="address2">
+                <small></small>
+            </div>
+
+          
+            <div class="input-box">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="">Select Country</option>
+                    <option value="Country1">Country1</option>
+                    <option value="Country2">Country2</option>
+                </select>
+                <small></small>
+            </div>
+
+           
+            <div class="input-box">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city">
+                <small></small>
+            </div>
+
+            
+            <div class="input-box">
+                <label for="region">Region</label>
+                <input type="text" id="region" name="region">
+                <small></small>
+            </div>
+
+            
+            <div class="input-box">
+                <label for="postalcode">Postal Code</label>
+                <input type="text" id="postalcode" name="postalcode">
+                <small></small>
+            </div>
+
+            <div class="input-box" style="position: relative;">
+                <label for="createpassword">Create Password</label>
+                <input type="password" id="createpassword" name="createpassword">
+                <i id="togglePasswordCreate" class="fa-solid fa-eye-slash"></i> <!-- Eye icon for toggling password visibility -->
+                <small></small>
+            </div>
+
+            
+            <div class="input-box" style="position: relative;">
+                <label for="confirmpassword">Confirm Password</label>
+                <input type="password" id="confirmpassword" name="confirmpassword">
+                <i id="togglePasswordConfirm" class="fa-solid fa-eye-slash"></i>
+                <small></small>
+            </div>
+
+           
+            <div class="input-box">
+                <button type="submit" disabled>Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
